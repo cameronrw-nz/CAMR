@@ -9,7 +9,7 @@ These series of Model posts are going to follow my journey in creating Warhammer
 
 As of the title of the post I have completed 1 whole squad of Thousand Sons Rubrics and I plan on build a few more squads of paint them. In the immediate future expect to see Scarab Occult Terminators, more Rubrics, Abaddon and some CSM.
 
-<img class="embedded-images" alt="rubric" src="/Images/TS-Marine.jpg"/>
+<img class="embedded-images" alt="rubric" src="${process.env.PUBLIC_URL}/Images/TS-Marine.jpg"/>
 
 It took me a while to decide on a colour scheme as the classic blue and gold is too prominent and I wanted to set my Thousands sons apart. I also wanted to create a custom warband so it's possible to ally in CSM without any lore troubles or without it seeming too much like Chaos Soup. 
 

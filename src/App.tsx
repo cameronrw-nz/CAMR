@@ -12,8 +12,9 @@ import Reading from './Components/Reading';
 
 class App extends Component {
     render() {
+        console.log(process.env.PUBLIC_URL)
         return (
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className="background-image"></div>
                 <div className="App">
                     <header className="App-header">
