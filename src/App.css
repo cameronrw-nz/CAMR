@@ -1,0 +1,71 @@
+.App {
+  height: 100%;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+}
+
+body, html, #root {
+    height: 100%;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  height:54px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.embedded-images {
+    max-width: fit-content;
+    justify-content: center;
+    width: calc(70%);
+    margin-left: 15%;
+}
+
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    
+    display: block;
+    background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');
+    width: 1920px;
+    height: 1080px;
+    
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(2px);
+    background-image:url('./Resources/Images/Hochgurgl.jpg');
+    background-blend-mode: hard-light;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
