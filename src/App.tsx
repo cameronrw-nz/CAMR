@@ -23,10 +23,13 @@ class App extends Component {
                     <Switch>
                         <Route path="/" exact component={withRouter(Home)} />
                         <Route path={NavigationConstants.Coding} exact component={withRouter(Coding)} />
+                        <Route path={`${NavigationConstants.Coding}/:id`} exact component={withRouter(Coding)} />
                         <Route path={NavigationConstants.Adventure} exact component={withRouter(Adventure)} />
+                        <Route path={`${NavigationConstants.Adventure}/:id`} exact component={withRouter(Adventure)} />
                         <Route path={NavigationConstants.Models} exact component={withRouter<IModelsProps>(Models)} />
                         <Route path={`${NavigationConstants.Models}/:id`} exact component={withRouter(Models)} />
                         <Route path={NavigationConstants.Reading} exact component={withRouter(Reading)} />
+                        <Route path={`${NavigationConstants.Reading}/:id`} exact component={withRouter(Reading)} />
                     </Switch>
                 </div>
             </BrowserRouter>
