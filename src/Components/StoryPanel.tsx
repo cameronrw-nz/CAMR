@@ -7,16 +7,17 @@ export interface IStoryPanelProps {
 }
 
 export interface IStoryPanelInfo {
+    createdDate?: Date;
     defaultImgColour?: string;
-    title: string;
+    description?: string;
+    id?: string;
+    imageUrl?: any;
     item: NavigationConstants;
     markDown?: string;
-    description?: string;
-    imageUrl?: any;
-    id?: string;
+    title: string;
 }
 
-export function StoryPanel({ defaultImgColour, id, item, imageUrl, title }: IStoryPanelProps & IStoryPanelInfo) {
+export function StoryPanel({ createdDate, defaultImgColour, id, item, imageUrl, title }: IStoryPanelProps & IStoryPanelInfo) {
     let image;
 
     if (imageUrl) {
@@ -36,6 +37,9 @@ export function StoryPanel({ defaultImgColour, id, item, imageUrl, title }: ISto
                 <Footer>
                     {title}
                 </Footer>
+                <FooterDate>
+                    {createdDate && createdDate.toDateString()}
+                </FooterDate>
             </Panel>
         </Link>
     )
@@ -71,4 +75,8 @@ const Footer = styled.p`
     margin: 0;
     padding: 0;
     font-weight:bold;
+`
+const FooterDate = styled.p`
+    margin: 0;
+    padding: 0;
 `

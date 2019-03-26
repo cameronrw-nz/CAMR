@@ -26,6 +26,7 @@ export default [
         id: "firstRubric",
         markDown: firstRubric,
         item: NavigationConstants.Models,
-        imageUrl: `${process.env.PUBLIC_URL}/Images/TS-Marine.jpg`
+        imageUrl: `${process.env.PUBLIC_URL}/Images/TS-Marine.jpg`,
+        createdDate: new Date(2019, 2, 24)
     }
 ] as IStoryPanelInfo[]

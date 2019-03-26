@@ -23,10 +23,11 @@ However as to not burn myself out on the Horus Heresy series I am currently read
 
 export default [
     {
+        createdDate: new Date(2019, 2, 26),
         title: "The Book Shelf",
         id: "bookShelf",
         markDown: bookShelf,
         item: NavigationConstants.Reading,
-        imageUrl: `${process.env.PUBLIC_URL}/Images/BookShelf.jpg`
+        imageUrl: `${process.env.PUBLIC_URL}/Images/BookShelf.jpg`,
     }
 ] as IStoryPanelInfo[]
