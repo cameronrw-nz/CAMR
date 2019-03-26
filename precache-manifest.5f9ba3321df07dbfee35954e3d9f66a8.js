@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/CAMR/static/js/runtime~main.09a0dca1.js"
   },
   {
-    "revision": "6c73c3ea5bbec2d21191",
-    "url": "/CAMR/static/js/main.b6d018d9.chunk.js"
+    "revision": "d92145d1ebdb676e3756",
+    "url": "/CAMR/static/js/main.c1269420.chunk.js"
   },
   {
-    "revision": "1ac3e226b258a88d92c3",
-    "url": "/CAMR/static/js/2.70c07292.chunk.js"
+    "revision": "f7051fc09fed28f7bcea",
+    "url": "/CAMR/static/js/2.54b13d1c.chunk.js"
   },
   {
-    "revision": "6c73c3ea5bbec2d21191",
+    "revision": "d92145d1ebdb676e3756",
     "url": "/CAMR/static/css/main.74b0719f.chunk.css"
   },
   {
-    "revision": "a98ac4157b1bbe63e44a9a17e470c735",
+    "revision": "0217c256692c5ccb8eca5b7ef9c328e2",
     "url": "/CAMR/index.html"
   }
 ];
