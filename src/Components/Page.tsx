@@ -23,6 +23,7 @@ const Page = styled.div`
     min-height: 0;
     overflow-y: auto;
     padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
 `
 
 const ScrollableContent = styled.div`
