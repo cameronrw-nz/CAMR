@@ -18,7 +18,6 @@ I think the paint scheme has turned out well, the red was inspired from the old 
 The new release of Vigilus ablaze is on its way along with Abaddon the Despoiler!
 
 <img alt="abaddon" class="embedded-images" src="https://whc-cdn.games-workshop.com/wp-content/uploads/2019/02/40kAbaddon-Mar5-Abaddon7tyerhvfsh.jpg" />
-
 `
 
 export default [
@@ -27,6 +26,6 @@ export default [
         id: "firstRubric",
         markDown: firstRubric,
         item: NavigationConstants.Models,
-        imageUrl: require("../../Resources/Images/TS-Marine.jpg")
+        imageUrl: `${process.env.PUBLIC_URL}/Images/TS-Marine.jpg`
     }
 ] as IStoryPanelInfo[]
