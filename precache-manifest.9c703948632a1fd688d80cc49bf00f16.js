@@ -4,24 +4,24 @@ self.__precacheManifest = [
     "url": "/CAMR/static/media/Hochgurgl.3ae4dfa8.jpg"
   },
   {
-    "revision": "4334f9703e260c768a01",
-    "url": "/CAMR/static/css/main.74b0719f.chunk.css"
+    "revision": "66623a443abe13f81392",
+    "url": "/CAMR/static/css/main.78f812d9.chunk.css"
   },
   {
     "revision": "7636e8c3986706e05559",
     "url": "/CAMR/static/js/runtime~main.09a0dca1.js"
   },
   {
-    "revision": "b4e094be62a1c6f146dd",
-    "url": "/CAMR/static/js/2.0384246b.chunk.js"
+    "revision": "1649ae035ab1a5d26e16",
+    "url": "/CAMR/static/js/2.b05820e2.chunk.js"
   },
   {
     "revision": "fed2d0e0d2e4f7a61735eb79324c69a8",
     "url": "/CAMR/static/media/Menu.fed2d0e0.svg"
   },
   {
-    "revision": "4334f9703e260c768a01",
-    "url": "/CAMR/static/js/main.421f0feb.chunk.js"
+    "revision": "66623a443abe13f81392",
+    "url": "/CAMR/static/js/main.8ed48a96.chunk.js"
   },
   {
     "revision": "db59110f17799ea2058eefd8cf027b24",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/CAMR/static/media/BookShelf.18e5aa26.jpg"
   },
   {
-    "revision": "fa400c1af29c2e73d76c54fe1fe42aee",
+    "revision": "77290f00303c51efeb466c9a26ea84cb",
     "url": "/CAMR/index.html"
   }
 ];
