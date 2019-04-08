@@ -9,7 +9,9 @@ These series of Model posts are going to follow my journey in creating Warhammer
 
 As of the title of the post I have completed 1 whole squad of Thousand Sons Rubrics and I plan on build a few more squads of paint them. In the immediate future expect to see Scarab Occult Terminators, more Rubrics, Abaddon and some CSM.
 
-<img class="embedded-images" alt="rubric" src="${process.env.PUBLIC_URL}/Images/TS-Marine.jpg"/>
+<img class="embedded-images" alt="rubric" src="${
+    process.env.PUBLIC_URL
+}/Images/TS-Marine.jpg"/>
 
 It took me a while to decide on a colour scheme as the classic blue and gold is too prominent and I wanted to set my Thousands sons apart. I also wanted to create a custom warband so it's possible to ally in CSM without any lore troubles or without it seeming too much like Chaos Soup. 
 
@@ -18,7 +20,7 @@ I think the paint scheme has turned out well, the red was inspired from the old 
 The new release of Vigilus ablaze is on its way along with Abaddon the Despoiler!
 
 <img alt="abaddon" class="embedded-images" src="https://whc-cdn.games-workshop.com/wp-content/uploads/2019/02/40kAbaddon-Mar5-Abaddon7tyerhvfsh.jpg" />
-`
+`;
 
 export default [
     {
@@ -29,4 +31,4 @@ export default [
         imageUrl: `${process.env.PUBLIC_URL}/Images/TS-Marine.jpg`,
         createdDate: new Date(2019, 2, 24)
     }
-] as IStoryPanelInfo[]
+] as IStoryPanelInfo[];

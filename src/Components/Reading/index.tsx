@@ -1,44 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import { StoryPanel, IStoryPanelInfo } from '../StoryPanel';
-import ReactMarkdown from 'react-markdown'
-import { StoryContainer } from '../StoryContainer';
-import { RouteComponentProps } from 'react-router';
-import { CommonPage } from '../Page';
-import StoryPanelInfos from './blogPosts'
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import { RouteComponentProps } from "react-router";
 
-interface IReadingProps extends RouteComponentProps<any> {
-}
+import { StoryPanel, IStoryPanelInfo } from "../StoryPanel";
+import { StoryContainer } from "../StoryContainer";
+import { CommonPage } from "../Page";
+import StoryPanelInfos from "./blogPosts";
+
+interface IReadingProps extends RouteComponentProps<any> {}
 
 function Reading({ match }: IReadingProps) {
-    const [storyPanels, setStoryPanels] = useState<IStoryPanelInfo[] | undefined>(undefined);
-
-    useEffect(() => {
-        setStoryPanels(StoryPanelInfos)
-    }, []);
-
-    const storyPanelsDisplay = storyPanels && storyPanels.map((story: IStoryPanelInfo, index: number) => {
-        return (
-            <StoryPanel
-                key={index}
-                {...story}
-            />
-        );
-    });
+    const storyPanelsDisplay = StoryPanelInfos.map(
+        (story: IStoryPanelInfo, index: number) => {
+            return <StoryPanel key={index} {...story} />;
+        }
+    );
 
     let content: React.ReactNode;
     if (match.params.id) {
-        const input = storyPanels && storyPanels.find(storyPanel => storyPanel.id === match.params.id);
+        const input = StoryPanelInfos.find(
+            storyPanel => storyPanel.id === match.params.id
+        );
 
         if (input !== undefined) {
-            content = <ReactMarkdown escapeHtml={false} source={input!.markDown} />;
+            content = (
+                <ReactMarkdown escapeHtml={false} source={input!.markDown} />
+            );
         }
-    }
-    else {
-        content = (
-            <StoryContainer>
-                {storyPanelsDisplay}
-            </StoryContainer>
-        );
+    } else {
+        content = <StoryContainer>{storyPanelsDisplay}</StoryContainer>;
     }
 
     return (
@@ -48,4 +38,4 @@ function Reading({ match }: IReadingProps) {
     );
 }
 
-export default Reading
+export default Reading;

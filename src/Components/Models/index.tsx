@@ -1,44 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import { StoryPanel, IStoryPanelInfo } from '../StoryPanel';
-import ReactMarkdown from 'react-markdown'
-import { StoryContainer } from '../StoryContainer';
-import { RouteComponentProps } from 'react-router';
-import { CommonPage } from '../Page';
-import StoryPanelInfos from './blogPosts'
+import React, { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import { RouteComponentProps } from "react-router";
 
-export interface IModelsProps extends RouteComponentProps<any> {
-}
+import { StoryPanel, IStoryPanelInfo } from "../StoryPanel";
+import { StoryContainer } from "../StoryContainer";
+import { CommonPage } from "../Page";
+import StoryPanelInfos from "./blogPosts";
+
+export interface IModelsProps extends RouteComponentProps<any> {}
 
 function Models({ match }: IModelsProps) {
-    const [storyPanels, setStoryPanels] = useState<IStoryPanelInfo[] | undefined>(undefined);
+    const [storyPanels] = useState<IStoryPanelInfo[]>(StoryPanelInfos);
 
-    useEffect(() => {
-        setStoryPanels(StoryPanelInfos)
-    }, []);
-
-    const storyPanelsDisplay = storyPanels && storyPanels.map((story: IStoryPanelInfo, index: number) => {
-        return (
-            <StoryPanel
-                key={index}
-                {...story}
-            />
-        );
-    });
+    const storyPanelsDisplay = storyPanels.map(
+        (story: IStoryPanelInfo, index: number) => {
+            return <StoryPanel key={index} {...story} />;
+        }
+    );
 
     let content: React.ReactNode;
     if (match.params.id) {
-        const input = storyPanels && storyPanels.find(storyPanel => storyPanel.id === match.params.id);
+        const input = storyPanels.find(
+            storyPanel => storyPanel.id === match.params.id
+        );
 
         if (input !== undefined) {
-            content = <ReactMarkdown escapeHtml={false} source={input!.markDown} />;
+            content = (
+                <ReactMarkdown escapeHtml={false} source={input!.markDown} />
+            );
         }
-    }
-    else {
-        content = (
-            <StoryContainer>
-                {storyPanelsDisplay}
-            </StoryContainer>
-        );
+    } else {
+        content = <StoryContainer>{storyPanelsDisplay}</StoryContainer>;
     }
 
     return (
@@ -48,4 +40,4 @@ function Models({ match }: IModelsProps) {
     );
 }
 
-export default Models
+export default Models;
