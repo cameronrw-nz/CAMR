@@ -13,8 +13,8 @@ export function Tabs(props: ITabsProps) {
     const tabs = [];
     for (const navItem in NavigationConstants) {
         tabs.push(
-            <Link to={NavigationConstants[navItem]}>
-                <Tab key={navItem}>{navItem}</Tab>
+            <Link key={navItem} to={NavigationConstants[navItem]}>
+                <Tab>{navItem}</Tab>
             </Link>
         );
     }

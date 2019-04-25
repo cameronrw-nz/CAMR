@@ -39,10 +39,11 @@ class App extends Component<{}, IAppState> {
         for (const navItem in NavigationConstants) {
             tabs.push(
                 <Link
-                    to={NavigationConstants[navItem]}
+                    key={navItem}
                     onClick={this.onMenuClick}
+                    to={NavigationConstants[navItem]}
                 >
-                    <Tab key={navItem}>{navItem}</Tab>
+                    <Tab>{navItem}</Tab>
                 </Link>
             );
         }

@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
 import { RouteComponentProps } from "react-router";
 
 import { StoryContainer } from "../StoryContainer";
 import { IStoryPanelInfo, StoryPanel } from "../StoryPanel";
 import { NavigationConstants } from "../NavigationConstants";
 import { CommonPage } from "../Page";
+import Icon from "./Icon";
+
+import EmailLogo from "../../Resources/Icons/email.svg";
+import GitHubLogo from "../../Resources/Icons/github.svg";
+import LinkedInLogo from "../../Resources/Icons/linkedin.svg";
 
 interface IHomeProps extends RouteComponentProps<any> {}
 
@@ -45,14 +49,28 @@ function Home({ match }: IHomeProps) {
             return <StoryPanel key={index} {...story} />;
         });
 
-    let content = (
-        <ReactMarkdown escapeHtml={false} source={homePageMarkdown} />
-    );
-
     return (
         <CommonPage isStoryPage={true}>
             <StoryContainer>
-                <div>{content}</div>
+                <div className="about-me">
+                    <div className="about-me-heading">About Me</div>
+                    <div className="about-me-content">
+                        My name is Cameron Williams and I am a Software
+                        Engineer. I was born in New Zealand and currently work
+                        in Bangkok, Thailand.
+                    </div>
+                    <div className="about-me-icon-section">
+                        <Icon url="cameronrw.nz@gmail.com" logo={EmailLogo} />
+                        <Icon
+                            url="https://github.com/cameronrw-nz"
+                            logo={GitHubLogo}
+                        />
+                        <Icon
+                            url="https://www.linkedin.com/in/cameron-williams-594754122/"
+                            logo={LinkedInLogo}
+                        />
+                    </div>
+                </div>
                 {storyPanelsDisplay}
             </StoryContainer>
         </CommonPage>
@@ -60,13 +78,3 @@ function Home({ match }: IHomeProps) {
 }
 
 export default Home;
-
-const homePageMarkdown = `
-About Me
-============
-
-My name is Cameron Williams and I am a Software Engineer. I was born in New Zealand and currently work in Bangkok Thailand.
-
-For more info on my coding projects please visit:
-https://github.com/cameronrw-nz
-`;

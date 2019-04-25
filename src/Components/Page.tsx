@@ -32,7 +32,7 @@ const ScrollableContent = styled.div`
     height: fit-content;
     min-height: calc(100% - 20px);
     width: calc(
-        45% - ${(props: IPageProps) => (props.isStoryPage ? -80 : 80)}px
+        60% - ${(props: IPageProps) => (props.isStoryPage ? -80 : 80)}px
     );
     padding: 0px ${(props: IPageProps) => (props.isStoryPage ? 0 : 80)}px;
     padding-bottom: 20px;
